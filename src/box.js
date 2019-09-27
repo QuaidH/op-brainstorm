@@ -133,7 +133,6 @@ class Box extends Component {
             <Box1
               key={i}
               className="box"
-              align-items="center"
               onMouseEnter={this.onMouseEnter}
               onMouseLeave={this.onMouseLeave}
               pose={this.state.hover ? "hover" : "initial"}
