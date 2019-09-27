@@ -89,9 +89,9 @@ class Modals extends Component {
   render() {
     return (
       <div>
-            <div id="wrapperHeader">
-             <div id="header">
-              <img src={Group} align="750px" width="750px" height="flex" alt="logo"/>
+            <div className="wrapperHeader">
+             <div className="header">
+              <img src={Group}/>
               </div>
             </div>
           <div id="ButtonSign">
@@ -131,17 +131,19 @@ class Modals extends Component {
       </div>
 
           </Modal>
-            <div>
-              <h1 className="UpcomingEvents" align="center">
+            <div id="Soon">
+              <p1 align="center" height="25px">
                 Coming Soon
-              </h1>
+              </p1>
             </div>
 
         <PoseGroup animateOnEnter={true} preEnterPose="before">
+
           {imgArray.map(i => (
             <Box
               key={i}
               className="box"
+              align-items="center"
               onMouseEnter={this.onMouseEnter}
               onMouseLeave={this.onMouseLeave}
               pose={this.state.hover ? "hover" : "initial"}

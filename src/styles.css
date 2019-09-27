@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Electrolize&display=swap');
 
 body {
+  display: flex;
+  overflow-x:auto;
   height: 100vh;
   padding: 0;
   justify-content: stretch;
@@ -25,31 +27,37 @@ body {
   width: 200px;
   height: 200px;
   margin: 15px;
-  display: inline-block;
+  display: inline-flex;
+
 }
 .box img {
   width: 150px;
   height: 150px;
   margin: 15px;
-  display: inline-block;
-}
-div#wrapperHeader {
-  width:100%;
-  height: 100%;
-  text-align: flex;
-}
+  display: inline-flex;
 
-div#wrapperHeader div#header {
-  width: 100%;
+}
+.wrapperHeader {
+  width:100%;
+  height: 150px;
+}
+.wrapperHeader .header {
   display: flex;
   justify-content: center;
-  height: flex;
-  margin: 0 auto;
+}
+.wrapperHeader .header img {
+  max-width: 60%;
+  height: auto;
+  display: flex;
+  justify-content: center;
 }
 
-.UpcomingEvents {
+#Soon {
+  width: 100%;
   font-family: 'Electrolize', sans-serif;
-  font-size: 75px;
+  font-size: 125px;
+  display: flex;
+  justify-content: center;
 }
 
 * {
@@ -101,10 +109,13 @@ input[type=submit]:hover {
   height: 100px;
   display: flex;
   justify-content: center;
+  padding: 1.5em;
+
 }
  #SignUp {
-   width: 75px;
-   height: 50px;
+  width: 75px;
+  height: 50px;
+  align-items: center;
   background-color: #FF8787;
   border-radius: 10px;
   color: white;
