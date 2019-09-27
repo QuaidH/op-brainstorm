@@ -1,4 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Electrolize&display=swap');
+@-ms-viewport {
+  width: device-width;
+}
+
 
 body {
   display: flex;
@@ -39,14 +43,45 @@ body {
 }
 .wrapperHeader {
   width:100%;
-  height: 150px;
+  height: 120px;
 }
+
+
+@media (max-width: 600px) {
+  .wrapperHeader .header {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+  }
+} 
+@media (max-width: 600px) {
+  .wrapperHeader {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+  }
+} 
+
 .wrapperHeader .header {
+  width: 100%;
   display: flex;
   justify-content: center;
 }
+
+@media (max-width: 600px) {
+  .wrapperHeader .header img {
+    padding: 0px;
+    max-width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+  }
+} 
 .wrapperHeader .header img {
-  max-width: 60%;
+  padding: 25px;
+  max-width: 50%;
   height: auto;
   display: flex;
   justify-content: center;
@@ -55,7 +90,14 @@ body {
 #Soon {
   width: 100%;
   font-family: 'Electrolize', sans-serif;
-  font-size: 125px;
+  font-size: 50px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+}
+
+#Soon #comingSoon {
+  width: 100%;
   display: flex;
   justify-content: center;
 }
@@ -115,6 +157,7 @@ input[type=submit]:hover {
  #SignUp {
   width: 75px;
   height: 50px;
+  justify-content: center;
   align-items: center;
   background-color: #FF8787;
   border-radius: 10px;

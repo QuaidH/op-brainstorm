@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 import posed, { PoseGroup } from 'react-pose';
 import axios from 'axios';
 import imgArray from './images/imgArray';
@@ -7,32 +6,23 @@ import Group from "./images/Group.png";
 import Modal from 'react-modal';
 import './styles.css';
 
-const Box = posed.div({
+const Box1 = posed.div({
   before: {
     opacity: 0,
     y: -25
   },
-  // enter: {
-  //   opacity: 1,
-  //   y: 0
-
-  // },
-  // exit: {
-  //   opacity: 0,
-  //   y: 25
-  // },
   initial: {
-    scale: 1.2,
+    scale: 1.1,
   },
   hover: {
-    scale: 1.2,
+    scale: 1.1,
     boxShadow: "0px 0px 0px rgba(0,0,0,0.2)"
   }
 });
 
-const API_PATH = 'http://http://localhost:3000/?firstname=&lastname=&email='
+// const API_PATH = 'http://http://localhost:3000/index.php'
 
-class Modals extends Component {
+class Box extends Component {
 
   constructor(props) {
     super(props);
@@ -91,7 +81,7 @@ class Modals extends Component {
       <div>
             <div className="wrapperHeader">
              <div className="header">
-              <img src={Group}/>
+              <img src={Group} alt="img1"/>
               </div>
             </div>
           <div id="ButtonSign">
@@ -132,7 +122,7 @@ class Modals extends Component {
 
           </Modal>
             <div id="Soon">
-              <p1 align="center" height="25px">
+              <p1 id="comingSoon">
                 Coming Soon
               </p1>
             </div>
@@ -140,7 +130,7 @@ class Modals extends Component {
         <PoseGroup animateOnEnter={true} preEnterPose="before">
 
           {imgArray.map(i => (
-            <Box
+            <Box1
               key={i}
               className="box"
               align-items="center"
@@ -149,15 +139,12 @@ class Modals extends Component {
               pose={this.state.hover ? "hover" : "initial"}
             >
               <img src={i} alt="group"/>
-            </Box>
+            </Box1>
           ))}
         </PoseGroup>
       </div>
     );
   };
 };
-
-const rootElement = document.getElementById("root");
-ReactDOM.render(<Modals />, rootElement);
 
 export default Box
