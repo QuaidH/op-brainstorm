@@ -26,78 +26,114 @@ body {
   justify-content: center;
   display: flex;
 }
+.BoxWrapper {
+  width:100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+}
+
 
 .box {
-  width: 200px;
-  height: 200px;
-  margin: 15px;
-  display: inline-flex;
-
+  width: 100%;
+  height: auto;
+  margin: 0px;
+  display: flex;
+  justify-content: center;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
 }
 
 @media (max-width: 600px) {
   .box {
-    width: 5px;
-    height: 5px;
-    display: inline-flex;
+    width: 100%;
+    height: 150px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+  }
+} 
+
+@media (max-width: 600px) {
+  .BoxWrapper {
+    width:100%;
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 } 
 
 @media (max-width: 600px) {
   .box img {
-    width: 5px;
-    height: 5px;
-    display: inline-flex;
+    width: 75px;
+    display: center;
+    flex-direction: column;
+    height: 100px;
+    justify-content: center;
   }
 } 
 .box img {
-  width: 150px;
-  height: 150px;
-  margin: 15px;
-  display: inline-flex;
+  width: 100px;
+  margin: 5px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
 
 }
 .wrapperHeader {
   width:100%;
-  height: 120px;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
 }
-
 
 @media (max-width: 600px) {
   .wrapperHeader .header {
     width: 100%;
-    height: 100px;
+    height: auto;
     display: flex;
     justify-content: center;
   }
 } 
 @media (max-width: 600px) {
   .wrapperHeader {
-    width: 100%;
-    height: 100px;
+    width:100%;
+    height: auto;
     display: flex;
     justify-content: center;
+    padding: 15px;
   }
 } 
 
 .wrapperHeader .header {
   width: 100%;
+  height: auto;
   display: flex;
   justify-content: center;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
 }
 
 @media (max-width: 600px) {
   .wrapperHeader .header img {
-    padding: 0px;
-    max-width: 100%;
-    height: 250px;
+    width: 125px;
+    height: 145px;
     display: flex;
     justify-content: center;
   }
 } 
 .wrapperHeader .header img {
-  padding: 25px;
-  max-width: 100%;
+  padding: 15px;
+  width: 100%;
   height: auto;
   display: flex;
   justify-content: center;
@@ -105,7 +141,7 @@ body {
 @media (max-width: 600px) {
   #Soon #comingSoon {
     width: 100%;
-    height: 100px;
+    height: auto;
     display: flex;
     justify-content: center;
   }
@@ -114,15 +150,23 @@ body {
   width: 100%;
   font-family: 'Electrolize', sans-serif;
   font-size: 50px;
-  height: 150px;
+  height: auto;
   display: flex;
   justify-content: center;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
 }
 
-#Soon #comingSoon {
+#comingSoon {
   width: 100%;
+  height: auto;
+  padding: 25px;
   display: flex;
   justify-content: center;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
 }
 
 * {
@@ -169,19 +213,26 @@ input[type=submit]:hover {
    background-color: #f2f2f2;
    padding: 20px;
 }
+@media (max-width: 600px) {
+  button#SignUp {
+    width: 100%;
+    height: 200px;
+  }
+} 
 #ButtonSign {
   width: 100%;
-  height: 100px;
+  padding: 15px;
+  height: auto;
   display: flex;
   justify-content: center;
-  padding: 1.5em;
 
 }
- #SignUp {
+ button#SignUp {
   width: 75px;
-  height: 50px;
-  justify-content: center;
-  align-items: center;
+  height: auto;
+  display: flex;
+  justify-content: flex;
+  align-items: flex;
   background-color: #FF8787;
   border-radius: 10px;
   color: white;

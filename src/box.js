@@ -126,7 +126,7 @@ class Box extends Component {
                 Coming Soon
               </p1>
             </div>
-
+              <div className="BoxWrapper">
         <PoseGroup animateOnEnter={true} preEnterPose="before">
 
           {imgArray.map(i => (
@@ -141,6 +141,7 @@ class Box extends Component {
             </Box1>
           ))}
         </PoseGroup>
+      </div>
       </div>
     );
   };
